@@ -39,12 +39,30 @@
                 android:fontFamily="@font/nnbrgd"/>
         </LinearLayout>
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/HistoryActivityRecyclerView"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/HistoryActivityBackGroudTextView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:textSize="20dp"
+                android:textColor="@color/dark_grey"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:fontFamily="@font/nnbrgd"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/HistoryActivityRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </FrameLayout>
+
+
 
     </LinearLayout>
 

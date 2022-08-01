@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.example.flowproject.DatabaseManager.SQLiteManager;
 import com.example.flowproject.adapter.RecyclerViewAdapterForHistory;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 
 public class HistoryActivity extends AppCompatActivity {
 
+    TextView backgroundTextView;
     RecyclerView recyclerView;
 
     RecyclerViewAdapterForHistory adapter;
@@ -25,6 +27,7 @@ public class HistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
+        backgroundTextView = findViewById(R.id.HistoryActivityBackGroudTextView);
         recyclerView = findViewById(R.id.HistoryActivityRecyclerView);
 
         recyclerView.setHasFixedSize(true);
@@ -36,8 +39,13 @@ public class HistoryActivity extends AppCompatActivity {
             @Override
             public void OnCallback(Object object) {
                 ArrayList<String> dataList = (ArrayList<String>) object;
-                adapter = new RecyclerViewAdapterForHistory(dataList, HistoryActivity.this);
-                recyclerView.setAdapter(adapter);
+                if(dataList.size() == 0){
+                    backgroundTextView.setText("최신 검색 이력이 없습니다.");
+                }else {
+                    backgroundTextView.setText("");
+                    adapter = new RecyclerViewAdapterForHistory(dataList, HistoryActivity.this);
+                    recyclerView.setAdapter(adapter);
+                }
             }
         });
     }
