@@ -35,16 +35,17 @@
                 android:fontFamily="@font/nnbrgd"/>
             <ImageView
                 android:id="@+id/MainActivitySearchButton"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center"
                 android:src="@drawable/my_search_icon"/>
             <ImageView
                 android:id="@+id/MainActivityHistoryButton"
-                android:layout_width="50dp"
-                android:layout_height="30dp"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginBottom="1dp"
                 android:layout_gravity="center"
                 android:src="@drawable/my_search_history_icon"/>
         </LinearLayout>
