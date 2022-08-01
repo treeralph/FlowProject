@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            app:cardCornerRadius="25dp"
+            app:contentPadding="7dp"
+            android:layout_gravity="bottom|right"
+            app:cardBackgroundColor="@color/grey">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:fontFamily="@font/nnbrgd"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/historyItemCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1.5dp"
+            android:layout_marginBottom="1.5dp"
+            app:cardCornerRadius="15dp"
+            app:contentPadding="7dp"
+            app:cardBackgroundColor="@color/yellow">
+            <TextView
+                android:id="@+id/historyItemTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text="EXAMPLE"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nnbrgd"/>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>
